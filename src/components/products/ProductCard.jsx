@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import star from "../../assets/icons/star.svg"
 import img from "../../assets/images/productCardImg.png"
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "../../styles/productCard.css"
 import rarrow from "../../assets/icons/right-arrow.svg";
 import larrow from "../../assets/icons/left-arrow.svg";
@@ -10,12 +8,8 @@ import heart from "../../assets/icons/heart.svg";
 import unheart from "../../assets/icons/unheart.svg";
 
 const ProductCard = () => {
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-    }, []);
     return (
-        <div className='product-card__block' data-aos="fade-down" data-aos-once="true" data-aos-duration="1100">
+        <div className='product-card__block'>
             <div className="card-info">
                 <img src={img} alt=""  />
                 <button className="like-block">
