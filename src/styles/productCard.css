@@ -5,13 +5,15 @@
     justify-content: space-between;
 }
 
-.bestseller {
+.bestseller,
+.recommendation {
     font-family: Montserrat;
     text-align: center;
     margin: 50px 0 80px;
 }
 
-.bestseller h2 {
+.bestseller h2,
+.recommendation h2 {
     margin-bottom: 40px;
     font-size: 26px;
 }

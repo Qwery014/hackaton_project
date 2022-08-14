@@ -1,0 +1,73 @@
+footer {
+    font-family: Montserrat;
+    background-color: #181818;
+    color: #FFF;
+}
+
+footer a,
+footer p {
+    color: #FFF;
+}
+
+footer .container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-right {
+    display: flex;
+}
+
+.footer__logo {
+    margin-right: 140px;
+}
+
+.footer__logo img {
+    height: 100%;
+}
+
+.footer__list {
+    font-family: Inter;
+    font-size: 14px;
+    padding: 0;
+    margin-right: 50px;
+    line-height: 1.5;
+}
+
+
+
+.footer-left {
+    display: flex;
+    align-items: stretch;
+}
+
+
+
+.footer-rules {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 9px;
+}
+
+
+
+
+
+.footer-share ul {
+    padding: 0;
+    display: flex;
+}
+.footer-share img {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+.footer-share li {
+    margin-left: 15px;
+}
+.footer-rules {
+    margin-right: 10px;
+}
