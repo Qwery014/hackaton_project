@@ -1,0 +1,42 @@
+.big-banner {
+    width: 100%;
+    height: 245px;
+    border-radius: 10px;
+    background-color: red;
+    position: relative;
+}
+.big-banner img,
+.little-banner {
+    object-fit: cover;
+    user-select: none;
+}
+
+.big-banner__catalog-btn {
+    font-weight: 500;
+    background-color: #181818;
+    color: #FFF;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    padding: 15px 60px;
+    border-radius: 550px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 0;
+    user-select: none;
+}
+.big-banner__catalog-btn:hover {
+    background-color: #8A8A8A;
+    cursor: pointer;
+}
+
+.little-banner__block {
+    display: flex;
+    justify-content: space-between;
+}
+.little-banner {
+    width: calc(50% - 10px);
+    height: 188px;
+    border-radius: 10px;
+}
