@@ -1,0 +1,186 @@
+.catalog {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    font-family: Montserrat;
+}
+.catalog .catalog__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+    z-index: 22;
+}
+.catalog-sidebar {
+    font-family: Montserrat;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.catalog__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-sidebar h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+summary::marker {
+    content: "";
+}
+
+.drop__list-item summary,
+.catalog__item-close {
+    font-size: 16px;
+    font-weight: 700;
+    z-index: 20;
+}
+
+.drop__list-item a {
+    font-size: 14px;
+}
+
+.drop__list details[open] summary img {
+    transform: rotateZ(180deg);
+}
+
+.drop__list .active__drop {
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+.drop__list details {
+    margin-top: 10px;
+}
+
+.drop__list details ul {
+    margin-left: 15px;
+}
+
+.catalog__header-sort ul {
+    display: flex;
+}
+.catalog__header-sort ul li {
+    margin-right: 20px;
+}
+.catalog__header-sort ul li a {
+    cursor: pointer;
+}
+.active-sort {
+    font-weight: 700;
+}
+
+
+
+
+
+.catalog__header-filter {
+    position: relative;
+}
+
+.filter-icon{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.filter-block p {
+    margin: 0 0 20px 20px;
+    font-family: Inter;
+}
+
+.drop__filter {
+    width: 350px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+}
+
+.slider {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+.css-187mznn-MuiSlider-root {
+    width: 95% !important;
+    margin: 0 auto !important;
+}
+
+.filter__colors-list {
+    display: flex;
+}
+
+.filter__colors-item {
+    width: 25px;
+    height: 25px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
+    margin-right: 10px;
+    border: 0;
+}
+
+.colorch1 {
+    background-color: #A4DEFF;
+}
+
+.colorch2 {
+    background-color: #FFF;
+}
+
+.colorch3 {
+    background-color: #181818;
+}
+
+.colorch4 {
+    background-color: #FFAEAE;
+}
+.filter-accept__btn {
+    margin-top: 40px;
+    border: 0;
+    padding: 7px 25px;
+    background-color: #F1F1F1;
+    font-family: Inter;
+    border-radius: 3px;
+}
+#filter-input ~ .drop__filter {
+    display: none;
+}
+#filter-input:checked ~ .drop__filter {
+    display: block;
+}
+.catalog-sidebar {
+    min-width: 300px;
+}
+
+
+.catalog__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1;
+}
+.catalog main {
+    margin-top: 15px;
+}
+.catalog__main .product-card__block {
+    margin-top: 40px;
+}
+.catalog-pagination {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 50px;
+}
+.css-1p5q5e5-MuiStack-root {
+    margin-left: 20px;
+}
