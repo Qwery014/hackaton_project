@@ -1,0 +1,21 @@
+.contact-page {
+  font-family: Montserrat;
+}
+.contact-page h3 {
+  font-size: 24px;
+  margin: 20px 0 50px;
+}
+.contact-page ul {
+  display: flex;
+  flex-direction: column;
+}
+.contact-page li a {
+  display: flex;
+  margin-bottom: 20px;
+}
+.contact-page li a img {
+  margin-right: 15px;
+}
+.map {
+  margin: 60px 0;
+}
