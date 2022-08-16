@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import NotFoundPage from "./pages/NotFoundPage";
 import Registration from "./pages/Registration";
 import ContactUs from "./pages/ContactUs";
+import PersonalArea from "./pages/PersonalArea";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -63,6 +64,11 @@ const MainRoutes = () => {
       link: "contacts",
       element: <ContactUs />,
       id: 10,
+    },
+    {
+      link: "personalarea",
+      element: <PersonalArea />,
+      id: 11,
     },
   ];
   return (
