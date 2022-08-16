@@ -36,9 +36,11 @@
     justify-content: space-between;
     margin: 7px 0 14px;
 }
+
 .card-info {
     position: relative;
 }
+
 .card-info img {
     width: 100%;
 }
@@ -53,19 +55,22 @@
     right: 6px;
     border: 0;
 }
+
 .like-block img {
     width: 14px;
     height: 14px;
-    
+
 }
 
 .product-card__interact-block {
+    width: 100%;
     display: flex;
     align-items: start;
     justify-content: space-between;
 }
 
-.product-card__interact-block img {
+.product-card__interact-block img,
+.details__rating img {
     width: 24px;
 }
 
@@ -75,6 +80,7 @@
     font-weight: 600;
     font-family: Inter;
 }
+
 .rating img {
     margin-left: 6px;
 }
@@ -115,7 +121,9 @@
     justify-content: space-between
 }
 
-.product__counter button {
+
+.product__counter button,
+.product-info__counter button {
     background-color: #F6F6F6;
     border: 0;
     display: flex;
@@ -129,7 +137,7 @@
     width: 100%;
 }
 
-.product-card__interact-block button {
+.product-card__interact-block .inCart {
     font-size: 13px;
     font-weight: 500;
     background: #181818;
@@ -140,9 +148,11 @@
     cursor: pointer;
 }
 
-.product-card__interact-block button:hover {
+.product-card__interact-block .inCart:hover,
+.continue-btn:hover {
     background-color: #FF6565;
     border: 2px solid #FF6565;
+    color: #FFF;
 }
 
 .product__amount p {
@@ -176,4 +186,194 @@
 
 .color4 {
     background-color: #FFAEAE;
+}
+
+.product-card {
+    display: flex;
+}
+
+.product-details__header {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.product-details {
+    font-family: Montserrat;
+}
+
+.product-details__header {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.details__rating {
+    margin-left: 20px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-info__block {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.product-info__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-info__share {
+    display: flex;
+    align-items: center;
+}
+
+.image__block {
+    width: 80%;
+}
+
+.main-img__img {
+    width: 80%;
+    position: relative;
+}
+.main-img__img img {
+    width: 100%;
+}
+
+.descr-img img {
+    margin: 25px 15px 0px 0px;
+}
+
+.product-info__share img {
+    width: 20px;
+    margin-left: 15px;
+}
+
+.product-info__colors {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.product-info__colors img {
+    border-radius: 10px;
+    height: 80px;
+    height: 60px;
+    margin-right: 22px;
+}
+
+.product-card__color_active {
+    border: 3px solid #181818;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: gray !important;
+}
+
+.css-1aquho2-MuiTabs-indicator {
+    background-color: black !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: black !important;
+}
+
+.product__tab_descr {
+    margin: 40px 10px;
+}
+
+.product__tab_descr p {
+    color: #8A8A8A;
+    margin-bottom: 15px;
+}
+
+.product-info__amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.product-info__counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card-cost {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.product-card-cost::after,
+.product-card__discount::after {
+    content: "\20BD";
+}
+
+.product-card__discount,
+.product-card__discount_descr {
+    color: #FF6565;
+
+}
+
+.product-card__discount {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.continue-btn {
+    font-size: 13px;
+    font-weight: 500;
+    background: #FFF;
+    border: 2px solid #181818;
+    color: #181818;
+    border-radius: 45px;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+.product-info__price-block {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 25px;
+}
+
+.product-info_price {
+    display: flex;
+    align-items: end;
+}
+
+.product-card-cost {
+    margin-right: 30px;
+}
+
+.product-card__discount {
+    margin-right: 7px;
+}
+
+.product-card__discount_descr {
+    font-size: 14px;
+}
+
+
+.amount-count{
+    padding: 0 10px;
+}
+
+
+.product-info__amount p {
+    margin-bottom: 16px;
+}
+.arrow-cardDetail {
+    padding: 10px 7px !important;
+}
+.product-info__tabs {
+    margin-top: 60px;
 }

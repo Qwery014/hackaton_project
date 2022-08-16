@@ -1,9 +1,11 @@
 import { Slider } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import filterIcon from "../../assets/icons/filter.svg"
 import ProductCard from "../products/ProductCard"
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 function valuetext(value) {
@@ -13,6 +15,10 @@ function valuetext(value) {
 const minDistance = 200;
 
 const CatalogProductList = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+}, []);
 
   const [value1, setValue1] = React.useState([100, 3000]);
 
@@ -79,18 +85,18 @@ const CatalogProductList = () => {
         </div>
       </div>
       <div className="catalog__main">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
+        <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
       </div>
       <div className="catalog__footer">
         <div className="catalog-pagination">
