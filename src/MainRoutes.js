@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import ProductDetails from "./components/products/ProductDetails";
 import AboutUs from "./pages/AboutUs";
 import AdminPage from "./pages/AdminPage";
 import Cart from "./pages/Cart";
@@ -9,6 +10,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NotFoundPage from "./pages/NotFoundPage";
 import Registration from "./pages/Registration";
+import ContactUs from "./pages/ContactUs";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -39,7 +41,7 @@ const MainRoutes = () => {
     },
     {
       link: "/catalog",
-      element: <Catalog />,
+      element: <Catalog/>,
       id: 6,
     },
     {
@@ -56,6 +58,11 @@ const MainRoutes = () => {
       link: "*",
       element: <NotFoundPage />,
       id: 9,
+    },
+    {
+      link: "contacts",
+      element: <ContactUs />,
+      id: 10,
     },
   ];
   return (

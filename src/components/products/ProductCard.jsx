@@ -47,7 +47,7 @@ const ProductCard = () => {
                     </div>
                 </div>
                 <div className="product-card__interact-block">
-                    <button>В КОРЗИНУ</button>
+                    <button className='inCart'>В КОРЗИНУ</button>
                     <div className="rating">
                         <span>4.7</span>
                         <img src={star} alt="" />
