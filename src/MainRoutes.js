@@ -70,6 +70,11 @@ const MainRoutes = () => {
       element: <PersonalArea />,
       id: 11,
     },
+    {
+      link: "productdetails",
+      element: <ProductDetails />,
+      id: 12,
+    },
   ];
   return (
     <Routes>
