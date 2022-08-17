@@ -48,8 +48,7 @@ nav {
     justify-content: end;
 }
 
-.active,
-.main-content__nav li a:hover {
+.active {
     font-weight: 700;
     color: #181818;
 }
@@ -114,7 +113,7 @@ nav {
 .header-bottom__top {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0  ;
+    margin: 30px 0 0;
 }
 
 .header-bottom__top button {
@@ -153,15 +152,3 @@ nav {
     color: #181818;
     user-select: none;
 }
-
-.main-content__nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-
-}
-.main-content__nav li a {
-    cursor: pointer;
-    font-size: 15px;
-}
-

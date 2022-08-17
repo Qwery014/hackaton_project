@@ -14,9 +14,7 @@ const PersonalArea = () => {
                     <div className="pa-left">
                         <ul>
                             <li><a className='pa-active'>Информация</a></li>
-                            <li><a>Лист ожидания</a></li>
                             <li><a>Избранное</a></li>
-                            <li><a>заказы</a></li>
                             <li><a>Удалить профиль</a></li>
                         </ul>
                     </div>

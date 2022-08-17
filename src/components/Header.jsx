@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from "../assets/icons/Logo.svg";
 import profile from "../assets/icons/profile-icon.svg";
 import cart from "../assets/icons/cart.svg";
@@ -6,19 +6,25 @@ import phone from "../assets/icons/phone.svg";
 import like from "../assets/icons/like.svg";
 import "../styles/header.css";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
 
+    const navigate = useNavigate()
+    const [searchColor, setSearchColor] = useState("unset");
 
-    const [searchColor, setSearchColor] = useState("unset")
+
+
+
 
 
 
     return (
+
         <header>
             <div className="container">
                 <div className="header-top">
-                    <a className='logo'>
+                    <a className='logo' onClick={() => navigate("/")}>
                         <img src={logo} alt="" />
                     </a>
                     <div className="right-header" >
@@ -34,12 +40,14 @@ const Header = () => {
                         </nav>
                         <div className="right-header__sub-nav">
                             <div className="nav__phone-link">
-                                <img src={phone} alt="" />
-                                <a href="tel:+7 (968) 890 55  56">+7 (968) 890 55  56</a>
+                                <a href="tel:+7 (968) 890 55  56" style={{display: "flex", flexDirection: "column"}}>
+                                    <img src={phone} alt="" />
+                                    +7 (968) 890 55  56
+                                </a>
                             </div>
                             <p>ИНТЕРНЕТ-МАГАЗИН С БЕСПЛАТНОЙ ДОСТАВКОЙ</p>
                             <ul className='right-header__sub-nav_list'>
-                                <li className='right-header__sub-nav_item'>
+                                <li className='right-header__sub-nav_item' onClick={() => navigate("/personalarea")}>
                                     <img src={profile} alt="" />
                                     <p>
                                         Войти
@@ -64,7 +72,9 @@ const Header = () => {
                 <div className="header-bottom">
                     <div className="header-bottom__top">
                         <div className="catalog-btn">
-                            <button className='catalog-btn__btn'>КАТАЛОГ</button>
+                            <button className='catalog-btn__btn'
+                                onClick={() => navigate("/catalog")}
+                            >КАТАЛОГ</button>
                         </div>
                         <div className="search-block" style={{ boxShadow: searchColor }}>
                             <input
@@ -72,23 +82,13 @@ const Header = () => {
                                 placeholder='Введите что вам нужно'
                                 onFocus={() => setSearchColor("0px 0px 20px #00000040")}
                                 onBlur={() => setSearchColor("0px 0px 3px #00000000")}
+                                
                             />
-                            <button className='search-btn'>ПОИСК</button>
+                            <button className='search-btn' onClick={() => {navigate("/catalog")}}>ПОИСК</button>
                         </div>
                     </div>
-                    <div className="header-bottom__bottom">
-                        <ul className="main-content__nav">
-                            <li><a>Сумки</a></li>
-                            <li><a>Косметички</a></li>
-                            <li><a className='active'>Для дома</a></li>
-                            <li><a>Для путешествий</a></li>
-                            <li><a>Для животных</a></li>
-                            <li><a>Для рукоделия</a></li>
-                            <li><a>Органайзеры</a></li>
-                            <li><a>Пепельницы</a></li>
-                            <li><a>Пепельницы</a></li>
-                        </ul>
-                    </div>
+
+
                 </div>
             </div>
         </header>
