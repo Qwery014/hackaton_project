@@ -15,13 +15,33 @@
 .pa-block {
   display: flex;
 }
-.pa-left ul a {
+.warper {
+  width: 100%;
+}
+.pa-left ul label {
   padding: 10px 20px;
   display: block;
   border-radius: 20px;
 }
-.pa-active {
+#warp1:checked ~ .pa-block .pa-left ul .label1,
+#warp2:checked ~ .pa-block .pa-left ul .label2 {
   background-color: #D9D9D9;
+}
+#warp1:checked ~ .pa-block .pa-right form,
+#warp1:checked ~ .pa-block .pa-right .pa-right__btn {
+  display: flex;
+}
+#warp1 ~ .pa-block .pa-right form,
+#warp1 ~ .pa-block .pa-right .pa-right__btn {
+  display: none;
+}
+#warp2:checked ~ .pa-block .pa-right .delete-account__block,
+#warp2:checked ~ .pa-block .pa-right .delete-account__block {
+  display: block;
+}
+#warp2 ~ .pa-block .pa-right .delete-account__block,
+#warp2 ~ .pa-block .pa-right .delete-account__block {
+  display: none;
 }
 .pa-right form textarea {
   resize: none;
@@ -47,7 +67,7 @@
   color: #000;
 }
 .pa-right form {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

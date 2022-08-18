@@ -21,6 +21,7 @@ import Recommendation from '../homeRecommendations/Recommendation';
 import heart from "../../assets/icons/heart.svg";
 import unheart from "../../assets/icons/unheart.svg";
 import img from "../../assets/images/productCardImg.png"
+import { useNavigate } from 'react-router-dom';
 
 function LinkTab(props) {
   return (
@@ -37,6 +38,9 @@ function LinkTab(props) {
 
 
 const ProductDetails = () => {
+
+  const navigate = useNavigate();
+
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -48,20 +52,12 @@ const ProductDetails = () => {
 
       <div className='product-details__header'>
         Косметичка непромокаемая, 31/22/11 см
-        <div className="rating details__rating">
-          4.7
-          <img src={star} />
-        </div>
       </div>
 
       <div className="product-card">
-
         <div className="image__block">
           <div className="main-img">
             <div className="main-img__img">
-              <button className="like-block">
-                <img src={unheart} alt="" />
-              </button>
               <img src={productCardImg} alt="" />
             </div>
           </div>
@@ -72,18 +68,7 @@ const ProductDetails = () => {
         </div>
         <div className="product-info">
           <div className="product-info__block">
-            <div className="product-info__header">
-              <div className="product-info__color">Цвет:</div>
-              <div className="product-info__share">
-                Поделиться: <a><img src={shareLink} alt="" /></a> <a><img src={telegramLink} alt="" /></a>
-              </div>
             </div>
-            <div className="product-info__colors">
-              <img src={color1} alt="" className='product-card__color_active' />
-              <img src={color2} alt="" />
-              <img src={color3} alt="" />
-            </div>
-          </div>
           <div className="product-info__amount">
             <p>Количество:</p>
             <div className="product-info__counter">
@@ -112,7 +97,7 @@ const ProductDetails = () => {
           </div>
           <div className="product-card__interact-block">
             <button className='inCart'>В КОРЗИНУ</button>
-            <button className='continue-btn'>ПРОДОЛЖИТЬ ПОКУПКИ</button>
+            <button className='continue-btn' onClick={() => navigate("/catalog")}>ПРОДОЛЖИТЬ ПОКУПКИ</button>
           </div>
           <div className="product-info__tabs">
             <Box sx={{ width: '100%' }}>

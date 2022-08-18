@@ -13,7 +13,7 @@ const Recommendation = () => {
         <h2>
             РЕКОМЕНДАЦИИ
         </h2>
-        <div className='ProductRecommendation'>
+        <div className='ProductRecommendation' style={{marginBottom: "200px"}}>
             <ProductCard />
             <ProductCard />
             <ProductCard />

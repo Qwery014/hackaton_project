@@ -36,7 +36,7 @@ const CatalogProductList = () => {
 
   return (
     <main>
-      <div className="catalog__header">
+      {/* <div className="catalog__header">
         <div className="catalog__header-sort">
           <ul>
             <li><b>Сортировать:</b></li>
@@ -83,7 +83,7 @@ const CatalogProductList = () => {
             <button className='filter-accept__btn'>Применить</button>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="catalog__main">
         <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>
         <div data-aos="fade-down" data-aos-once="true" data-aos-duration="1100"><ProductCard/></div>

@@ -39,11 +39,10 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function LoginPage() {
-    
-
   const navigate = useNavigate();
 
-  const { login, error } = useAuth();
+  const {login, error} = useAuth();
+  // const { login, error } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -80,8 +79,6 @@ export default function LoginPage() {
               autoFocus
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              onFocus={() => setChangeColorProfile("#8C2CEF")}
-              onBlur={() => setChangeColorProfile("#adadad")}
             />
           </div>
         </div>
@@ -102,8 +99,6 @@ export default function LoginPage() {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              onFocus={() => setChangeColorLock("#8C2CEF")}
-              onBlur={() => setChangeColorLock("#adadad")}
             />
           </div>
         </div>
