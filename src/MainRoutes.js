@@ -3,15 +3,16 @@ import { Route, Routes } from "react-router-dom";
 import ProductDetails from "./components/products/ProductDetails";
 import AboutUs from "./pages/AboutUs";
 import AdminPage from "./pages/AdminPage";
-import Cart from "./pages/Cart";
+import CartPage from "./pages/CartPage"
 import Catalog from "./pages/Catalog";
 import EditProductPage from "./pages/EditProductPage";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import NotFoundPage from "./pages/NotFoundPage";
-import Registration from "./pages/Registration";
 import ContactUs from "./pages/ContactUs";
 import PersonalArea from "./pages/PersonalArea";
+import LoginPage from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
+import Payment from "./components/payment/Payment";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -32,7 +33,7 @@ const MainRoutes = () => {
     },
     {
       link: "/cart",
-      element: <Cart />,
+      element: <CartPage />,
       id: 4,
     },
     {
@@ -47,12 +48,12 @@ const MainRoutes = () => {
     },
     {
       link: "/login",
-      element: <Login />,
+      element: <LoginPage />,
       id: 7,
     },
     {
       link: "/register",
-      element: <Registration />,
+      element: <RegistrationPage />,
       id: 8,
     },
     {
@@ -61,19 +62,24 @@ const MainRoutes = () => {
       id: 9,
     },
     {
-      link: "contacts",
+      link: "/contacts",
       element: <ContactUs />,
       id: 10,
     },
     {
-      link: "personalarea",
+      link: "/personalarea",
       element: <PersonalArea />,
       id: 11,
     },
     {
-      link: "productdetails",
+      link: "/productdetails",
       element: <ProductDetails />,
       id: 12,
+    },
+    {
+      link: "/pay",
+      element: <Payment />,
+      id: 13,
     },
   ];
   return (

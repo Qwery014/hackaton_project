@@ -8,7 +8,7 @@ import larrow from "../assets/icons/left-arrow.svg";
 
 const CartPage = () => {
   return (
-    <div className="mainCardPage">
+    <div className="mainCardPage" style={{marginBottom: "200px"}}>
       <div className="container">
         <h1>КОРЗИНА</h1>
 
