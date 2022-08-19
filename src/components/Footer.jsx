@@ -18,7 +18,7 @@ const Footer = () => {
                 </div>
                 <ul className='footer__list'>
                     <li className='footer__item'><a onClick={() => navigate("/catalog")}>Каталог</a></li>
-                    <li className='footer__item'><a onClick={() => navigate("/catalog")}>О нас</a></li>
+                    <li className='footer__item'><a onClick={() => navigate("/about")}>О нас</a></li>
                     <li className='footer__item'><a onClick={() => navigate("/pay")}>Оплата доставка</a></li>
                     <li className='footer__item'><a onClick={() => navigate("/contacts")}>Контакты</a></li>
                 </ul>

@@ -5,6 +5,7 @@ import "../styles/catalog.css"
 import Recommendation from "../components/homeRecommendations/Recommendation"
 
 const Catalog = () => {
+    
     return (
         <div className='container'>
             <div className="catalog">

@@ -83,6 +83,7 @@ nav {
 .right-header__sub-nav_list {
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 
 .right-header__sub-nav_item {
