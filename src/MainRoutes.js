@@ -72,7 +72,7 @@ const MainRoutes = () => {
       id: 11,
     },
     {
-      link: "/productdetails",
+      link: "/productdetails/:id",
       element: <ProductDetails />,
       id: 12,
     },

@@ -5,7 +5,8 @@ import cart from "../assets/icons/cart.svg";
 import phone from "../assets/icons/phone.svg";
 import "../styles/header.css";
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useProducts } from '../contexts/ProductContextProvider';
 
 const Header = () => {
 
@@ -26,6 +27,25 @@ const Header = () => {
         }
     }
 
+    const { getProducts, fetchByParams } = useProducts();
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const [search, setSearch] = useState(searchParams.get("q") || "");
+
+    useEffect(() => {
+        setSearchParams({
+            q: search,
+        });
+    }, [search]);
+
+    useEffect(() => {
+        getProducts();
+    }, [searchParams]);
+
+    useEffect(() => {
+        getProducts();
+    }, []);
+
     return (
 
         <header>
@@ -44,20 +64,17 @@ const Header = () => {
                         </nav>
                         <div className="right-header__sub-nav">
                             <div className="nav__phone-link">
-                                <a href="tel:+7 (968) 890 55  56" style={{display: "flex", flexDirection: "column"}}>
+                                <a href="tel:+7 (968) 890 55  56" style={{ display: "flex", flexDirection: "column" }}>
                                     <img src={phone} alt="" />
                                     +7 (968) 890 55  56
                                 </a>
                             </div>
                             <p>ИНТЕРНЕТ-МАГАЗИН С БЕСПЛАТНОЙ ДОСТАВКОЙ</p>
                             <ul className='right-header__sub-nav_list'>
-                                <li className='right-header__sub-nav_item' onClick={() => {checkAuth()}}>
+                                <li className='right-header__sub-nav_item' onClick={() => { checkAuth() }}>
                                     <img src={profile} alt="" />
-                                    <p>
-                                        Войти
-                                    </p>
                                 </li>
-                                <li className='right-header__sub-nav_item' onClick={() => {navigate("/cart")}}>
+                                <li className='right-header__sub-nav_item' onClick={() => { navigate("/cart") }}>
                                     <img src={cart} alt="" />
                                     <p className='cart'>
                                         1234
@@ -80,9 +97,10 @@ const Header = () => {
                                 placeholder='Введите что вам нужно'
                                 onFocus={() => setSearchColor("0px 0px 20px #00000040")}
                                 onBlur={() => setSearchColor("0px 0px 3px #00000000")}
-                                
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
                             />
-                            <button className='search-btn' onClick={() => {navigate("/catalog")}}>ПОИСК</button>
+                            <button className='search-btn' onClick={() => { navigate("/catalog") }}>ПОИСК</button>
                         </div>
                     </div>
                 </div>
